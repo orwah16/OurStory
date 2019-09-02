@@ -112,7 +112,7 @@
             android:gravity="start"
             android:layout_marginRight="8dp" />
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/memory_pic"
             android:layout_width="0dp"
             android:layout_height="201dp"

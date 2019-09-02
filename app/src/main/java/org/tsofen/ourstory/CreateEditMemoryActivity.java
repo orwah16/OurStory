@@ -229,16 +229,5 @@ public class CreateEditMemoryActivity extends AppCompatActivity implements View.
         finish();
     }
 
-    public void saveMemory(View view) {
 
-        Memory mem = new Memory();
-        EditText locationText = findViewById(R.id.memLocation_cememory);
-        mem.setLocation(locationText.getText().toString());
-        EditText DescriptionText = findViewById(R.id.memDescription_cememory);
-        mem.setDescription(DescriptionText.getText().toString());
-        mem.setFeeling(SelectedEmoji);
-        mem.setMemoryDate(MemDate);
-
-
-    }
 }

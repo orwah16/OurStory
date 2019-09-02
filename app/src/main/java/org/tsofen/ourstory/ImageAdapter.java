@@ -1,21 +1,22 @@
 package org.tsofen.ourstory;
 
 import android.content.Context;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ourstory.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
-    private List<ImgItem> images;
+    private ArrayList<ImgItem> images;
 
     @NonNull
     @Override
@@ -23,7 +24,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         Context context=parent.getContext();
         LayoutInflater inflater= LayoutInflater.from(context);
 
-        View imgView = inflater.inflate((R.layout.memory_img_item,parent,false);
+        View imgView = inflater.inflate(R.layout.memory_img_item,parent,false);
 
         ViewHolder viewHolder = new ViewHolder(imgView);
         return viewHolder;
@@ -46,10 +47,10 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         public ViewHolder(View itemView){
             super(itemView);
 
-            imgView=(ImageView) itemView.findViewById(R.id.memory_img);
+
         }
     }
-    public ImageAdapter(List<ImgItem> images){
+    public ImageAdapter(ArrayList<ImgItem> images){
         this.images=images;
     }
 
